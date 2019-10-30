@@ -1,0 +1,85 @@
+
+TASK 1
+
+2.Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included). The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+Code#
+
+for i in range(2000,3200):
+    if (i % 7 == 0) and (i % 5 !=0):
+        print(i,end=',')
+        
+        
+        
+3.Write a Python program to accept the user's first and last name and then getting them printed in
+the the reverse order with a space between first name and last name.
+
+Code#
+
+
+      first_name,last_name =input("enter First name and Lat name :" ).split(' ')
+      print(last_name,first_name)
+
+
+4.Write a Python program to find the volume of a sphere with diameter 12 cm.
+Formula: V=4/3 * π * r 3 
+
+Code#
+    
+      from math import pi
+      r = int(input("enter the radius: "))
+      v=4/3 * pi *r**3  
+      print(v)
+      
+  TASK 2
+  
+  1. Write a program which accepts a sequence of comma-separated numbers from console and generate a list. 
+  
+  Code#
+    n =int(input('enter the number : '))
+    for i in range(n):
+        print(i,end=',')
+  2.Create the below pattern using nested for loop in Python. 
+  
+  Code #
+  
+    n=5
+    for i in range(n):
+        for j in range(i):
+            print('*',end='')
+        print('')
+    for i in range(n,0,-1):
+        for j in range(i):
+            print('*',end='')
+        print('')
+        
+        
+3.Write a Python program to reverse a word after accepting the input from the user. 
+ 
+Sample Output: 
+ 
+Input word: AcadGild 
+
+Code#
+Word_rev= input('Enter word :' )
+print(Word_rev[::-1])
+ 
+Output: dilGdacA 
+
+
+
+
+4.Write a Python Program to print the given string in the format specified in the ​sample output. 
+ WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN, SOCIALIST, SECULAR, DEMOCRATIC REPUBLIC and to secure to all its citizens 
+ 
+Sample Output: 
+ 
+WE, THE PEOPLE OF INDIA,   having solemnly resolved to constitute India into a SOVEREIGN, !  SOCIALIST, SECULAR, DEMOCRATIC REPUBLIC    and to secure to all its citizens 
+
+
+Code#
+
+print('WE, THE PEOPLE OF INDIA,\n      having solemnly resolved to constitute India into a SOVEREIGN, ! \n           SOCIALIST, SECULAR, DEMOCRATIC REPUBLIC \n            and to secure to all its citizens') 
+
+
+
