@@ -1,1 +1,114 @@
 
+TASK 1
+
+1.Write a Python Program to implement your own myreduce() function which works exactly like Python's built-in function reduce()
+Code#
+
+def myreduce(anyfunc,seq):
+    result =seq[0]
+    for item in seq[1:]:
+        result =anyfunc(result,item)
+    return result
+
+def sum(x,y):
+    return x+y
+    
+    
+    
+print(myreduce(sum,[1,2,3]))
+
+2.Write a Python program to implement your own myfilter() function which works exactly like Python's built-in function filter() 
+
+Code#
+
+def myfilter(anyfunc,item):
+    res =[]
+    if anyfunc(item):
+        res.append(item)
+    return res
+
+def pos(x):
+    if (x < 0):
+        return False
+    else:
+        return True
+
+
+3. Implement List comprehensions to produce the following lists.
+Write List comprehensions to produce the following Lists
+['A', 'C', 'A', 'D', 'G', 'I', ’L’, ‘ D’]
+['x', 'xx', 'xxx', 'xxxx', 'y', 'yy', 'yyy', 'yyyy', 'z', 'zz', 'zzz', 'zzzz']
+['x', 'y', 'z', 'xx', 'yy', 'zz', 'xxx', 'yyy', 'zzz', 'xxxx', 'yyyy', 'zzzz']
+[[2], [3], [4], [3], [4], [5], [4], [5], [6]]
+[[2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7], [5, 6, 7, 8]]
+[(1, 1), (2, 1), (3, 1), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]
+
+Code#
+q.['A', 'C', 'A', 'D', 'G', 'I', ’L’, ‘ D’]
+
+
+word = 'ACADGILD'
+word_list = str([w_list for w_list in word])
+print(type(word_list))
+
+q.['x', 'xx', 'xxx', 'xxxx', 'y', 'yy', 'yyy', 'yyyy', 'z', 'zz', 'zzz', 'zzzz']
+
+word =['x','y','z']
+w_list =[w*num for w in word for num in range(1,5)]
+print(str(w_list))
+
+q.['x', 'y', 'z', 'xx', 'yy', 'zz', 'xxx', 'yyy', 'zzz', 'xxxx', 'yyyy', 'zzzz']
+
+Code#
+word =['x','y','z']
+w_list =[w*num  for num in range(1,5) for w in word]
+print(str(w_list))
+
+q.[[2], [3], [4], [3], [4], [5], [4], [5], [6]]
+
+i_list =[2,3,4]
+list_1 =[[l+i] for l in i_list for i in range(0,3)]
+print(list_1)
+
+q.[[2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7], [5, 6, 7, 8]]
+
+w =[[x+y for x in range(2,6)] for y in range(4)]
+print(w)
+
+
+3. Implement a function longestWord() that takes a list of words and returns the longest one. 
+
+def logestWord(list):
+    result=[]
+    for i in list:
+        result.append((len(i),i))
+    result.sort()
+    return result[-1][1]
+
+       
+logestWord(['ras','rgrfd','r','resdfgfde','fdd','a'])
+
+  
+ TASK 2
+ 
+ 1.Write a Python Program(with class concepts) to find the area of the triangle using the below formula. 
+ 
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+
+CODE#
+  
+  
+  
+2.Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
+
+
+
+3.Write a Python function which takes a character (i.e. a string of length 1) and returns True if it is a vowel, False otherwise. 
+
+Code#
+def func(char):
+    v='aeiou'
+    return char in v
+    
+print(func('d'))
+    
